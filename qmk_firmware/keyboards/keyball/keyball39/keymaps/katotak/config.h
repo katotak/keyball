@@ -35,3 +35,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define TAP_CODE_DELAY 5
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
+#define CLICK_LAYER_NUM 4
+#define CLICK_LAYER_LED_COLOR_HSV 132, 102, 50

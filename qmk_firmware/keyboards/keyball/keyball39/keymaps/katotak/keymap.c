@@ -60,7 +60,7 @@ uint16_t click_timer;       // タイマー。状態に応じて時間で判定�
 // uint16_t to_clickable_time = 50;   // この秒数(千分の一秒)、WAITING状態ならクリックレイヤーが有効になる。  For this number of seconds (milliseconds), if in WAITING state, the click layer is activated.
 uint16_t to_reset_time = 500; // この秒数(千分の一秒)、CLICKABLE状態ならクリックレイヤーが無効になる。 For this number of seconds (milliseconds), the click layer is disabled if in CLICKABLE state.
 
-const uint16_t click_layer = 4;   // マウス入力が可能になった際に有効になるレイヤー。Layers enabled when mouse input is enabled
+const uint16_t click_layer = CLICK_LAYER_NUM;   // マウス入力が可能になった際に有効になるレイヤー。Layers enabled when mouse input is enabled
 
 int16_t scroll_v_mouse_interval_counter;   // 垂直スクロールの入力をカウントする。　Counting Vertical Scroll Inputs
 int16_t scroll_h_mouse_interval_counter;   // 水平スクロールの入力をカウントする。  Counts horizontal scrolling inputs.
@@ -79,9 +79,9 @@ int16_t mouse_movement;
 
 void eeconfig_init_user(void) {
     user_config.raw = 0;
-    user_config.to_clickable_movement = 50;
-    user_config.mouse_scroll_v_reverse = false;
-    user_config.mouse_scroll_h_reverse = false;
+    user_config.to_clickable_movement = 5;
+    user_config.mouse_scroll_v_reverse = true;
+    user_config.mouse_scroll_h_reverse = true;
     eeconfig_update_user(user_config.raw);
 }
 
@@ -362,7 +362,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
     uint8_t layer = biton32(state);
     if (layer == click_layer) {
-        rgblight_sethsv(HSV_AZURE);
+        rgblight_sethsv(CLICK_LAYER_LED_COLOR_HSV);
     } else {
         rgblight_sethsv(HSV_OFF);
     }
@@ -436,14 +436,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   LAYOUT_universal(
     KC_1      , KC_2      , KC_3      , KC_4      , KC_5      ,                              KC_6      , KC_7      , KC_8      , KC_9      , KC_0      ,
-    KC_HOME   , KC_PGUP   , KC_UP     , KC_PGDN   , KC_DEL    ,                              KC_BTN4   , KC_BTN1   , KC_BTN3   , KC_BTN2   , KC_BTN5   ,
-    KC_END    , KC_LEFT   , KC_DOWN   , KC_RGHT   , KC_INS    ,                              XXXXXXX  ,ALT_T(XXXXXXX),CTL_T(XXXXXXX),SFT_T(XXXXXXX),XXXXXXX,
+    KC_HOME   , KC_PGUP   , KC_UP     , KC_PGDN   , KC_DEL    ,                              KC_BTN4   , KC_BTN1   , KC_BTN3   , KC_BTN2   , KC_MY_SCR   ,
+    KC_END    , KC_LEFT   , KC_DOWN   , KC_RGHT   , KC_INS    ,                              KC_BTN5  ,ALT_T(XXXXXXX),CTL_T(XXXXXXX),SFT_T(XXXXXXX),XXXXXXX,
     _______  , _______  , _______  , _______  , LT(3,_______) , _______   ,      _______   , LT(3,_______), _______  , _______  , _______  , _______
   ),
 
   LAYOUT_universal(
     KC_F1     , KC_F2     , KC_F3     , KC_F4     , KC_F5     ,                              KC_F6     , KC_F7     , KC_F8     , KC_F9     , KC_F10    ,
-    KC_F11    , KC_F12    , XXXXXXX   , XXXXXXX   , XXXXXXX   ,                     KC_TO_CLICKABLE_INC, XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , 
+    KC_F11    , KC_F12    , XXXXXXX   , XXXXXXX   , XXXXXXX   ,                     KC_TO_CLICKABLE_INC, KC_SCROLL_DIR_V, KC_SCROLL_DIR_H, XXXXXXX, XXXXXXX, 
     XXXXXXX,ALT_T(XXXXXXX),CTL_T(XXXXXXX),SFT_T(XXXXXXX),XXXXXXX,                   KC_TO_CLICKABLE_DEC,ALT_T(XXXXXXX),CTL_T(XXXXXXX),SFT_T(XXXXXXX),XXXXXXX,
     _______   , _______   , _______   , _______   , _______   , _______   ,      _______   , _______   , _______   , _______   , _______   , _______
   ),
