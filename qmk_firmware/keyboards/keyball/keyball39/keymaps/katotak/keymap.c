@@ -361,22 +361,10 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     // keyball_set_scroll_mode(get_highest_layer(state) == 3);
 
     uint8_t layer = biton32(state);
-    switch (layer) {
-        case 0:
-            rgblight_sethsv(HSV_OFF);
-            break;
-        case 1:
-            rgblight_sethsv(HSV_OFF);
-            break;
-        case 2:
-            rgblight_sethsv(HSV_OFF);
-            break;
-        case 3:
-            rgblight_sethsv(HSV_OFF);
-            break;
-        case 4:
-            rgblight_sethsv(HSV_AZURE);
-            break;
+    if (layer == click_layer) {
+        rgblight_sethsv(HSV_AZURE);
+    } else {
+        rgblight_sethsv(HSV_OFF);
     }
 
     return state;
@@ -384,7 +372,17 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
 #ifdef OLED_ENABLE
 
-#    include "lib/oledkit/oledkit.h"
+#include "lib/oledkit/oledkit.h"
+
+void mouse_layer_logo(void) {
+    static const char PROGMEM raw_logo[] = {
+        0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,128,192,192,192,192,128,  0,  0,  0,  0,128,128,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+        0,  0,  0,  0,  0,  0,  0,  0,  0,  0,255,255, 30,112,192,  0,  0,  0,  0,  0,  0,  0,  0,192,112, 28,  7,255,  0,  0,  0,  0,  0,  0,128,128,192, 64, 64, 64, 64,192,128,  0,  0,  0,  0,  0,  0,192,192,  0,  0,  0,  0,  0,  0,  0,192,192,  0,  0,  0,  0,  0,128,192, 64, 64, 64, 64, 64,192,192,  0,  0,  0,  0,  0,128,192,192, 64, 64, 64,192,192,128,  0,  0,  0,  0,  0,  0,  0,207,255,249,248,249,125,127,255,254,255,231,195,199,255,255,126,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+        0,  0,  0,  0,  0,  0,  0,  0,  0,  0,255,255,  0,  0,  1,  7, 60,240,192,192,112, 28,  7,  1,  0,  0,  0,255,  0,  0,  0,  0, 48,254,  3,  1,  0,  0,  0,  0,  0,  0,  1,207,254,  0,  0,  0,  0,255,255,  0,  0,  0,  0,  0,  0,  0,255,255,  0,  0,  0,  0,  2, 15, 24, 24, 16, 48, 48, 32, 96,192,  0,  0,  0, 48,254, 19, 16, 16, 16, 16, 16, 16, 17, 23, 30,  0,  0,  0,  0,  0, 31, 31, 31, 31,239,127,126,126, 63,255,255,255,255,255,255,255,254,252,240,192,192,128,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+        0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 15, 15,  0,  0,  0,  0,  0,  0,  1,  1,  0,  0,  0,  0,  0,  0,  0, 15,  0,  0,  0,  0,  0,  1,  7, 14, 12,  8,  8,  8,  8, 12,  6,  3,  1,  0,  0,  0,  0,  1,  7, 14, 12,  8,  8,  8,  8, 12,  7, 15,  0,  0,  0,  0,  4, 12, 12,  8,  8,  8,  8,  8, 12,  7,  1,  0,  0,  0,  1,  7,  6, 12,  8,  8,  8,  8,  8, 12,  4,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0, 22, 23, 55, 33, 44,126,110,111,103,103, 51, 51, 49, 24, 31, 15,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+    };
+    oled_write_raw_P(raw_logo, sizeof(raw_logo));
+}
 
 void oledkit_render_info_user(void) {
     keyball_oled_render_keyinfo();
@@ -396,6 +394,26 @@ void oledkit_render_info_user(void) {
     oled_write(get_u8_str(mouse_movement, ' '), false);
     oled_write_P(PSTR("/"), false);
     oled_write(get_u8_str(user_config.to_clickable_movement, ' '), false);
+}
+
+void render_user_oled(void) {
+  int layer = get_highest_layer(layer_state);
+  if (layer == click_layer) {
+    mouse_layer_logo();
+  } else {
+    oledkit_render_info_user();
+  }
+}
+
+// OLED の表示
+bool oled_task_user(void) {
+  oled_clear();
+  if (is_keyboard_master()) {
+    render_user_oled();
+  } else {
+    oledkit_render_logo_user();
+  }
+  return true;
 }
 #endif
 
