@@ -50,10 +50,10 @@
 
 #include "utils/functions.h"
 #include "features/swipe_gesture.h"
-#include "features/auto_click_layer.h"
+// #include "features/auto_click_layer.h"
 // #include "features/back_to_layer0_btn1.h"
 // #include "features/one_tap_multi_click.h"
-#include "features/macro_keys.h"
+// #include "features/macro_keys.h"
 
 // 容量オーバーのため不使用（VIAをOFFにすれば、使用可能）
 // #include "features/overrides.h"
@@ -68,9 +68,6 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
   // // レイヤーとLEDを連動させる
   switch(layer){
-    case AUTO_CLICK_LAYER:
-      rgblight_sethsv(132, 102, 50);
-      break;
     default:
       rgblight_sethsv(HSV_OFF);
       break;
@@ -100,31 +97,7 @@ void oledkit_render_info_user(void) {
   // oled_write(get_u8_str(mouse_movement, ' '), false);
   // oled_write_P(PSTR("/"), false);
   // oled_write(get_u8_str(to_clickable_movement, ' '), false);
-
-  // <state>を表示
-  switch (state) {
-    case WAITING:
-      oled_write_ln_P(PSTR("  WAITING"), false);
-      break;
-    case CLICKABLE:
-      oled_write_ln_P(PSTR("  CLICKABLE"), false);
-      break;
-    case CLICKING:
-      oled_write_ln_P(PSTR("  CLICKING"), false);
-      break;
-    case CLICKED:
-      oled_write_ln_P(PSTR("  CLICKED"), false);
-      break;
-    case SWIPE:
-      oled_write_ln_P(PSTR("  SWIPE"), false);
-      break;
-    case SWIPING:
-      oled_write_ln_P(PSTR("  SWIPING"), false);
-      break;
-    case NONE:
-      oled_write_ln_P(PSTR("  NONE"), false);
-      break;
-  }
+  
 }
 #endif
 
@@ -161,7 +134,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [4] = LAYOUT_universal(
     XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   ,                              XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   ,
-    XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   ,                              XXXXXXX   , KC_MS_BTN1, KC_MS_BTN3, KC_MS_BTN2, LT(5,XXXXXXX)   ,
+    XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   ,                              XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   ,
     XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   ,                              XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   ,
     _______   , _______   , _______   , _______   , _______   , _______   ,      _______   , _______   , _______   , _______   , _______   , _______
   ),
