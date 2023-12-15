@@ -57,7 +57,7 @@
 
 // 容量オーバーのため不使用（VIAをOFFにすれば、使用可能）
 // #include "features/overrides.h"
-#include "features/combo.h"
+// #include "features/combo.h"
 
 layer_state_t layer_state_set_user(layer_state_t state) {
     
