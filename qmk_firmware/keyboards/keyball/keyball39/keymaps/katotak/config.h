@@ -39,14 +39,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KEYBALL_SCROLLSNAP_ENABLE 0  // scrollsnapをオフにする
 
 #define TAP_CODE_DELAY 5
-#define DYNAMIC_KEYMAP_LAYER_COUNT 7
+#define DYNAMIC_KEYMAP_LAYER_COUNT 6
 
 #define SCROLL_LAYER 5
 
 #define KEYBALL_CPI_DEFAULT 700       // 光学センサーPMW3360DM の解像度 (CPI) の規定値
 #define KEYBALL_SCROLL_DIV_DEFAULT 5  // スクロール速度の規定値
 
-#define AUTO_CLICK_LAYER 6            // マウス入力が可能になった際に有効になるレイヤー
+#define AUTO_CLICK_LAYER 4            // マウス入力が可能になった際に有効になるレイヤー
 #define AUTO_CLICK_CLICKED_STAY_TIME 300;     // CLICKEDの滞在時間（千分の一秒)。その後、クリックレイヤーが無効になる
 #define AUTO_CLICK_CLICKABLE_STAY_TIME 1000;  // CLICKABLEの滞在時間（千分の一秒)。その後、クリックレイヤーが無効になる
 
