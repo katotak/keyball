@@ -200,8 +200,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [FUNC] = LAYOUT_universal(
     KC_F1     , KC_F2     , KC_F3     , KC_F4     , KC_F5     ,                              KC_F6     , KC_F7     , KC_F8     , KC_F9     , KC_F10    ,
-    KC_F11    , KC_F12    , XXXXXXX   , XXXXXXX   , XXXXXXX   ,                              KBC_SAVE  , CPI_I100  , CPI_I1K   , SCRL_DVI  , XXXXXXX   , 
-    XXXXXXX,ALT_T(XXXXXXX),CTL_T(XXXXXXX),SFT_T(XXXXXXX),XXXXXXX,                            KBC_RST   , CPI_D100  , CPI_D1K   , SCRL_DVD  ,XXXXXXX,
+    KC_F11    , KC_F12    , XXXXXXX   , XXXXXXX   , XXXXXXX   ,                              XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   ,
+    XXXXXXX,ALT_T(XXXXXXX),CTL_T(XXXXXXX),SFT_T(XXXXXXX),XXXXXXX,                            XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   ,
     _______   , _______   , _______   , _______   , _______   , _______   ,      _______   , _______   , _______   , _______   , _______   , XXXXXXX
   ),
 

@@ -36,7 +36,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define OLED_VERSION "             KATOTAK"
 
-#define COMBO_COUNT 5
+#define COMBO_COUNT 6
 
 #define KEYBALL_SCROLLSNAP_ENABLE 0  // scrollsnapをオフにする
 
