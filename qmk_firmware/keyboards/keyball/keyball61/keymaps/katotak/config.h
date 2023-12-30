@@ -33,6 +33,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #    define RGBLIGHT_EFFECT_TWINKLE
 // #endif
 
+#define OLED_VERSION "             KATOTAK"
+
 #define TAP_CODE_DELAY 5
 
 #define COMBO_COUNT 6
