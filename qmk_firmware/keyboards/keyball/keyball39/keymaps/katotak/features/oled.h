@@ -18,18 +18,21 @@ void oledkit_render_info_user(void) {
       case _JP_DEF:
           n = PSTR("JP_DEF");
           break;
-      case _FUNC:
-          n = PSTR("FUNC");
+      case _US_SYM:
+          n = PSTR("US_SYM");
           break;
-      case _SCRL:
-          n = PSTR("SCRL");
+      case _JP_SYM:
+          n = PSTR("JP_SYM");
+          break;
+      case _NUMFNC:
+          n = PSTR("NUMFNC");
           break;
       default:
           n = PSTR("Undefined");
           break;
-  }
-  oled_write_P(PSTR("Layer: "), false);
-  oled_write_ln_P(n, false);
+   }
+   oled_write_P(PSTR("Layer: "), false);
+   oled_write_ln_P(n, false);
 
 }
 
