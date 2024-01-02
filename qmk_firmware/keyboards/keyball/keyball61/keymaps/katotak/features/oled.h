@@ -1,6 +1,6 @@
 #ifndef _H_OLED_
-#define _H_OLED_
 #ifdef OLED_ENABLE
+#define _H_OLED_
 
 #include "lib/oledkit/oledkit.h"
 
