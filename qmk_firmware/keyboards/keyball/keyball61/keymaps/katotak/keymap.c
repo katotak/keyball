@@ -57,10 +57,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_FUNC] = LAYOUT_universal(
-    _______  , KC_F1    , KC_F2    , KC_F3    , KC_F4    , KC_F5    ,                                  KC_F6    , KC_F7    , KC_F8    , KC_F9    , KC_F10   , KC_F11   ,
-    _______  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,                                  XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , KC_F12   ,
-    _______  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,                                  KC_HOME  , KC_PGUP  , KC_UP    , KC_PGDN  , XXXXXXX  , XXXXXXX  ,
-    _______, XXXXXXX, SFT_T(XXXXXXX), CTL_T(XXXXXXX), ALT_T(XXXXXXX), XXXXXXX, DF(_JP_DEF), DF(_US_DEF), KC_END , KC_LEFT  , KC_DOWN  , KC_RGHT  , KC_INS   , XXXXXXX  ,
+    _______  , KC_F1    , KC_F2    , KC_F3    , KC_F4    , KC_F5    ,                                  KC_F6    , KC_F7    , KC_F8    , KC_F9    , KC_F10   , XXXXXXX  ,
+    XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  ,                                  XXXXXXX  , XXXXXXX  , XXXXXXX  , XXXXXXX  , KC_F11   , XXXXXXX  ,
+    XXXXXXX  , KC_1     , KC_2     , KC_3     , KC_4     , KC_5     ,                                  KC_HOME  , KC_PGUP  , KC_UP    , KC_PGDN  , KC_F12   , XXXXXXX  ,
+    XXXXXXX  , KC_6    , SFT_T(KC_7), CTL_T(KC_8), ALT_T(KC_9), KC_0, DF(_JP_DEF),          DF(_US_DEF), KC_END , KC_LEFT  , KC_DOWN  , KC_RGHT  , KC_INS   , XXXXXXX  ,
     _______  , _______  , _______  , _______  , _______  , _______  , KC_TAB   ,            KC_DEL  , _______  , XXXXXXX  , XXXXXXX  , XXXXXXX  , _______  , _______
   )
 
