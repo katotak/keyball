@@ -9,15 +9,15 @@
  */
 
 #include "keymap_japanese.h"
-#include "features/layer.h"
+#include "layer.h"
 
-// シフトキー + バックスペース で deleteキー
+// JIS配列の記号
 const key_override_t jp_key_override_1    = ko_make_with_layers(MOD_MASK_SHIFT, JP_1   , JP_EXLM, _JP_DEF);
 const key_override_t jp_key_override_2    = ko_make_with_layers(MOD_MASK_SHIFT, JP_2   , JP_AT  , _JP_DEF);
 const key_override_t jp_key_override_3    = ko_make_with_layers(MOD_MASK_SHIFT, JP_3   , JP_HASH, _JP_DEF);
 const key_override_t jp_key_override_4    = ko_make_with_layers(MOD_MASK_SHIFT, JP_4   , JP_DLR , _JP_DEF);
 const key_override_t jp_key_override_5    = ko_make_with_layers(MOD_MASK_SHIFT, JP_5   , JP_PERC, _JP_DEF);
-const key_override_t jp_key_override_6    = ko_make_with_layers(MOD_MASK_SHIFT, JP_6   , JP_CRIC, _JP_DEF);
+const key_override_t jp_key_override_6    = ko_make_with_layers(MOD_MASK_SHIFT, JP_6   , JP_CIRC, _JP_DEF);
 const key_override_t jp_key_override_7    = ko_make_with_layers(MOD_MASK_SHIFT, JP_7   , JP_AMPR, _JP_DEF);
 const key_override_t jp_key_override_8    = ko_make_with_layers(MOD_MASK_SHIFT, JP_8   , JP_ASTR, _JP_DEF);
 const key_override_t jp_key_override_9    = ko_make_with_layers(MOD_MASK_SHIFT, JP_9   , JP_LPRN, _JP_DEF);
