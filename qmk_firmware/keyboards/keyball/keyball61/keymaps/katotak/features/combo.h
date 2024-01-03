@@ -7,6 +7,7 @@
  * rules.mk: COMBO_ENABLE = yes
  * config.h: #define COMBO_COUNT 2（=実際に設定するコンボ数）
  */
+#pragma once
 
 #define COMBO_COUNT 6
 

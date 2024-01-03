@@ -1,5 +1,4 @@
-#ifndef _H_LAYER_
-#define _H_LAYER_
+#pragma once
 
 enum layer {
   _US_DEF_,
@@ -25,5 +24,3 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
   return state;
 }
-
-#endif

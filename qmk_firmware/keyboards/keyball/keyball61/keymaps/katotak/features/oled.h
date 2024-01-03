@@ -1,6 +1,6 @@
-#ifndef _H_OLED_
+#pragma once
+
 #ifdef OLED_ENABLE
-#define _H_OLED_
 
 #include "lib/oledkit/oledkit.h"
 
@@ -45,5 +45,4 @@ void  oledkit_render_logo_user(void) {
     oled_write_P(PSTR(OLED_VERSION), false);
     
 }
-#endif
 #endif

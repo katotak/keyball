@@ -7,6 +7,7 @@
  *
  * 注意：rules.mk で KEY_OVERRIDE_ENABLE = yes が必要です！
  */
+#pragma once
 
 #include "keymap_japanese.h"
 #include "layer.h"
