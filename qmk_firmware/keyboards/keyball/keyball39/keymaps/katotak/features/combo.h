@@ -8,6 +8,8 @@
  * config.h: #define COMBO_COUNT 2（=実際に設定するコンボ数）
  */
 
+#define COMBO_COUNT 6
+
 const uint16_t PROGMEM combo_btn1[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM combo_btn2[] = {KC_K, KC_L, COMBO_END};
 const uint16_t PROGMEM combo_btn3[] = {KC_J, KC_L, COMBO_END};

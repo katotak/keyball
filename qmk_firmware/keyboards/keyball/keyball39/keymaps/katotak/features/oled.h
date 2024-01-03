@@ -4,6 +4,8 @@
 
 #include "lib/oledkit/oledkit.h"
 
+#define OLED_VERSION "             KATOTAK"
+
 void oledkit_render_info_user(void) {
 
   keyball_oled_render_keyinfo();   // キー情報を表示
@@ -12,23 +14,23 @@ void oledkit_render_info_user(void) {
   // <Layer>を表示する
   const char *n;
   switch (get_highest_layer(layer_state | default_layer_state)) {
-      case _US_DEF:
-          n = PSTR("US_DEF");
+      case _US_DEF_:
+          n = PSTR("_US_DEF_");
           break;
-      case _JP_DEF:
-          n = PSTR("JP_DEF");
+      case _JP_DEF_:
+          n = PSTR("_JP_DEF_");
           break;
-      case _US_SYM:
-          n = PSTR("US_SYM");
+      case _US_SYM_:
+          n = PSTR("_US_SYM_");
           break;
-      case _JP_SYM:
-          n = PSTR("JP_SYM");
+      case _JP_SYM_:
+          n = PSTR("_JP_SYM_");
           break;
-      case _NUMFNC:
-          n = PSTR("NUMFNC");
+      case _NUM_SCR_:
+          n = PSTR("_NUM_SCR_");
           break;
       default:
-          n = PSTR("Undefined");
+          n = PSTR("_Undefined_");
           break;
    }
    oled_write_P(PSTR("Layer: "), false);
