@@ -1,6 +1,7 @@
 #ifndef _H_KEYLAYOUT_
 #define _H_KEYLAYOUT_
 
+#include "keymap_japanese.h"
 #include "features/layer.h"
 
 // clang-format off
@@ -23,10 +24,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_SYMBOL_] = LAYOUT_universal(
     _______  , XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   ,                                   XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   ,
-    XXXXXXX  , S(KC_1)   , S(KC_2)   , S(KC_3)   , S(KC_4)   , S(KC_5)   ,                                   S(KC_6)   , S(KC_7)   , S(KC_8)   , KC_GRV    , S(KC_GRV) , XXXXXXX   ,
-    XXXXXXX  , S(KC_SLSH), S(KC_LBRC), KC_LBRC   , S(KC_9)   , S(KC_COMM),                                   KC_LNG1   , KC_EQL    , S(KC_SCLN), KC_QUOT   , S(KC_MINS), XXXXXXX   ,
-    XXXXXXX  , S(KC_BSLS), S(KC_RBRC), KC_RBRC   , S(KC_0)   , S(KC_DOT) , XXXXXXX  ,             XXXXXXX  , KC_LNG2   , S(KC_EQL) , KC_SCLN   , S(KC_QUOT), KC_BSLS   , XXXXXXX   ,
-    KC_ESC   , KC_ESC   , XXXXXXX    , XXXXXXX   , KC_LGUI, SFT_T(KC_SPC), XXXXXXX  ,             KC_BSPC  , SFT_T(KC_ENT), XXXXXXX, XXXXXXX   , XXXXXXX   , KC_RSFT   , KC_RSFT
+    XXXXXXX  , KC_EXLM   , KC_AT     , KC_HASH   , KC_DLR    , KC_PERC   ,                                   KC_CIRC   , KC_AMPR   , KC_ASTR   , KC_GRV    , KC_TILD   , XXXXXXX   ,
+    XXXXXXX  , KC_QUES   , KC_LCBR   , KC_LBRC   , KC_LPRN   , KC_LABK   ,                                   KC_RCTL   , KC_EQL    , KC_COLN   , KC_QUOT   , KC_UNDS   , XXXXXXX   ,
+    XXXXXXX  , KC_PIPE   , KC_RCBR   , KC_RBRC   , KC_RPRN   , KC_RABK   , XXXXXXX  ,             XXXXXXX  , KC_RSFT   , KC_PLUS   , KC_SCLN   , KC_DQUO   , KC_BSLS   , XXXXXXX   ,
+    KC_ESC   , KC_ESC   , XXXXXXX    , XXXXXXX   , KC_LGUI, SFT_T(KC_SPC), XXXXXXX  ,             KC_DEL   , SFT_T(KC_ENT), XXXXXXX, XXXXXXX   , XXXXXXX   , KC_RSFT   , KC_RSFT
   ),
 
   [_NUM_SCR_] = LAYOUT_universal(
