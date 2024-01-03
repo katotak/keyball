@@ -23,5 +23,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "features/layer.h"
 #include "features/oled.h"
 #include "features/combo.h"
-#include "features/override.h"
+// #include "features/override.h"
 #include "features/keylayout.h"
