@@ -4,7 +4,7 @@
 
 #include "lib/oledkit/oledkit.h"
 
-#define OLED_VERSION "             KATOTAK"
+#define OLED_VERSION "        39 by KATOTAK"
 
 void oledkit_render_info_user(void) {
 
