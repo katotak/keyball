@@ -9,7 +9,7 @@
  */
 #pragma once
 
-#define COMBO_COUNT 15
+#include "features/layer.h"
 
 // マウスボタン
 const uint16_t PROGMEM combo_btn1[] = {ALT_T(KC_J), CTL_T(KC_K), COMBO_END};
@@ -19,6 +19,10 @@ const uint16_t PROGMEM combo_btn4[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM combo_btn5[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM combo_btn6[] = {KC_M, KC_DOT, COMBO_END};
 
+// Shift + 記号レイヤー
+const uint16_t PROGMEM combo_btn7[] = {SFT_T(KC_S), SFT_T(KC_SPC), COMBO_END};
+const uint16_t PROGMEM combo_btn8[] = {SFT_T(KC_L), SFT_T(KC_ENT), COMBO_END};
+
 combo_t key_combos[] = {
 
     COMBO(combo_btn1, KC_BTN1),
@@ -27,5 +31,7 @@ combo_t key_combos[] = {
     COMBO(combo_btn4, KC_BTN4),
     COMBO(combo_btn5, KC_BTN5),
     COMBO(combo_btn6, C(KC_W)),
+    COMBO(combo_btn7, MO(_US_SSYM_)),
+    COMBO(combo_btn8, MO(_US_SSYM_))
 
 };

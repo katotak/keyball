@@ -20,17 +20,11 @@ void oledkit_render_info_user(void) {
       case _US_SYM_:
           n = PSTR("_US_SYM_");
           break;
+      case _US_SSYM_:
+          n = PSTR("_US_SSYM_");
+          break;
       case _US_FNC_:
           n = PSTR("_US_FNC_");
-          break;
-      case _JP_DEF_:
-          n = PSTR("_JP_DEF_");
-          break;
-      case _JP_SYM_:
-          n = PSTR("JP_SYM");
-          break;
-      case _JP_FNC_:
-          n = PSTR("_JP_FNC_");
           break;
       case _SCROLL_:
           n = PSTR("_SCROLL_");

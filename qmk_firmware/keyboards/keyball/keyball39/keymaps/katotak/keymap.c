@@ -47,10 +47,9 @@
 
 #include QMK_KEYBOARD_H
 #include "quantum.h"
-#include "keymap_japanese.h"
+// #include "keymap_japanese.h"
 #include "features/layer.h"
 #include "features/oled.h"
 #include "features/combo.h"
-#include "features/override.h"
-#include "features/customkey.h"
+// #include "features/override.h"
 #include "features/keylayout.h"

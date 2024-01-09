@@ -1,14 +1,12 @@
 #pragma once
 
-#define DYNAMIC_KEYMAP_LAYER_COUNT 7
+#define DYNAMIC_KEYMAP_LAYER_COUNT 5
 
 enum layer {
   _US_DEF_,
   _US_SYM_,
+  _US_SSYM_,
   _US_FNC_,
-  _JP_DEF_,
-  _JP_SYM_,
-  _JP_FNC_,
   _SCROLL_
 };
 
