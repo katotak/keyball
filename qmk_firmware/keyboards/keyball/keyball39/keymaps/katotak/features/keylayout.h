@@ -22,8 +22,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_US_FNC_] = LAYOUT_universal(
     KC_F1     , KC_F2     , KC_F3     , KC_F4     , KC_F5     ,                              KC_F6     , KC_F7     , KC_F8     , KC_F9     , KC_F10    ,
-    KC_LGUI, SFT_T(KC_MUTE), CTL_T(KC_VOLU), KC_LALT   , XXXXXXX   ,                         XXXXXXX   , KC_RALT   , KC_RCTL   , KC_RSFT   , KC_F11    ,
-    XXXXXXX   , KC_BRID   , KC_VOLD   , KC_BRIU   , XXXXXXX   ,                              XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , KC_F12    ,
+    KC_LGUI, SFT_T(KC_MUTE), CTL_T(KC_VOLU), KC_LALT   , XXXXXXX   ,                         RGB_TOG   , KC_RALT   , KC_RCTL   , KC_RSFT   , KC_F11    ,
+    XXXXXXX   , KC_BRID   , KC_VOLD   , KC_BRIU   , XXXXXXX   ,                              RGB_MOD   , RGB_HUI   , RGB_SAI   , RGB_VAI   , KC_F12    ,
     KC_LGUI   , KC_LCTL   , KC_LALT   , KC_ESC    , XXXXXXX   , SFT_T(KC_TAB),        SFT_T(KC_BSPC),  XXXXXXX, XXXXXXX , XXXXXXX  , XXXXXXX , KC_DEL
   ),
 

@@ -21,18 +21,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 // 容量削減のため以下をオミット
-// #ifdef RGBLIGHT_ENABLE
-// #define RGBLIGHT_EFFECT_BREATHING
-// #define RGBLIGHT_EFFECT_RAINBOW_MOOD
-// #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-// #define RGBLIGHT_EFFECT_SNAKE
-// #define RGBLIGHT_EFFECT_KNIGHT
-// #define RGBLIGHT_EFFECT_CHRISTMAS
-// #define RGBLIGHT_EFFECT_STATIC_GRADIENT
-// #define RGBLIGHT_EFFECT_RGB_TEST
-// #define RGBLIGHT_EFFECT_ALTERNATING
-// #define RGBLIGHT_EFFECT_TWINKLE
-// #endif
+#ifdef RGBLIGHT_ENABLE
+#define RGBLIGHT_EFFECT_BREATHING
+#define RGBLIGHT_EFFECT_RAINBOW_MOOD
+#define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+#define RGBLIGHT_EFFECT_SNAKE
+#define RGBLIGHT_EFFECT_KNIGHT
+#define RGBLIGHT_EFFECT_CHRISTMAS
+#define RGBLIGHT_EFFECT_STATIC_GRADIENT
+#define RGBLIGHT_EFFECT_RGB_TEST
+#define RGBLIGHT_EFFECT_ALTERNATING
+#define RGBLIGHT_EFFECT_TWINKLE
+#endif
 
 #define KEYBALL_SCROLLSNAP_ENABLE 0  // scrollsnapをオフにする
 
@@ -54,3 +54,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define TAPPING_TERM 175
 // #define PERMISSIVE_HOLD
 // #define RETRO_TAPPING
+
+#undef RGBLIGHT_LIMIT_VAL
+#define RGBLIGHT_LIMIT_VAL 125

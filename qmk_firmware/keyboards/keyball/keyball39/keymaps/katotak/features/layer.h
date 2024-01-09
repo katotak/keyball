@@ -21,7 +21,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
   switch(layer){
     default:
-      rgblight_sethsv(HSV_OFF);
+      // rgblight_sethsv(HSV_OFF);
       break;
   }
 
