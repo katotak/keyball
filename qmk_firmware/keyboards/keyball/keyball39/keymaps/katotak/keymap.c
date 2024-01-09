@@ -52,4 +52,5 @@
 #include "features/oled.h"
 #include "features/combo.h"
 #include "features/override.h"
+#include "features/customkey.h"
 #include "features/keylayout.h"

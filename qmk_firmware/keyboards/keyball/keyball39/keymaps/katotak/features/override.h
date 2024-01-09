@@ -35,6 +35,9 @@ const key_override_t jp_key_override_slsh = ko_make_with_layers(MOD_MASK_SHIFT, 
 const key_override_t jp_key_override_bsls = ko_make_with_layers(MOD_MASK_SHIFT, JP_BSLS, JP_PIPE, _JP_SYM_);
 const key_override_t jp_key_override_grv  = ko_make_with_layers(MOD_MASK_SHIFT, JP_GRV , JP_TILD, _JP_SYM_);
 
+// Shift + TAB -> ESC
+const key_override_t sft_tab_override_esc  = ko_make_basic(MOD_MASK_SHIFT, KC_TAB , KC_ESC);
+
 // 使用する全てのキーオーバーライドをグローバルに定義
 const key_override_t **key_overrides = (const key_override_t *[]){
     &jp_key_override_1    ,
@@ -58,5 +61,6 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     &jp_key_override_slsh ,
     &jp_key_override_bsls ,
     &jp_key_override_grv  ,
+    &sft_tab_override_esc ,
     NULL  // オーバーライドの配列は Null で終了
 };
