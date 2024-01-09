@@ -8,37 +8,52 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_US_DEF_] = LAYOUT_universal(
     KC_Q      , KC_W      , KC_E      , KC_R      , KC_T      ,                              KC_Y      , KC_U      , KC_I      , KC_O      , KC_P      ,
-    KC_A      , KC_S      , KC_D      , KC_F      , KC_G      ,                              KC_H      , KC_J      , KC_K      , KC_L, LT(_NUM_SCR_,KC_MINS),
-    GUI_T(KC_Z), SFT_T(KC_X), CTL_T(KC_C), ALT_T(KC_V), KC_B  ,                              KC_N, ALT_T(KC_M), CTL_T(KC_COMM), SFT_T(KC_DOT), KC_SLSH,
-    XXXXXXX   , XXXXXXX, XXXXXXX, KC_LSFT  , SFT_T(KC_SPC), LT(_US_SYM_,KC_TAB),  LT(_NUM_SCR_,KC_BSPC), SFT_T(KC_ENT) , XXXXXXX , XXXXXXX  , XXXXXXX   , XXXXXXX
+    GUI_T(KC_A), SFT_T(KC_S), CTL_T(KC_D), ALT_T(KC_F), KC_G  ,                              KC_H, ALT_T(KC_J), CTL_T(KC_K), SFT_T(KC_L), LT(_SCROLL_,KC_MINS),
+    KC_Z      , KC_X      , KC_C      , KC_V      , KC_B      ,                              KC_N      , KC_M      , KC_COMM   , KC_DOT    , KC_SLSH   ,
+    KC_LGUI, KC_LCTL, KC_LALT, A(KC_GRV), KC_LSFT, LT(_US_SYM_,KC_SPC),        LT(_US_SYM_,KC_BSPC), SFT_T(KC_ENT), XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL
+  ),
+ 
+  [_US_SYM_] = LAYOUT_universal(
+    KC_1      , KC_2      , KC_3      , KC_4      , KC_5      ,                              KC_6      , KC_7      , KC_8      , KC_9      , KC_0      ,
+    GUI_T(KC_GRV), SFT_T(KC_PGUP), CTL_T(KC_UP), ALT_T(KC_PGDN), KC_HOME ,                   KC_EQL, ALT_T(KC_QUOT), CTL_T(KC_LBRC), SFT_T(KC_RBRC), KC_MINS,
+    KC_INS    , KC_LEFT   , KC_DOWN   , KC_RGHT   , KC_END    ,                              KC_BSLS   , KC_SCLN   , KC_COMM   , KC_DOT    , KC_SLSH   ,
+    KC_LGUI, KC_LCTL, KC_LALT, A(KC_GRV), KC_LSFT, LT(_US_FNC_,KC_TAB),        LT(_US_FNC_,KC_DEL), SFT_T(KC_ENT), XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL
+  ),
+
+  [_US_FNC_] = LAYOUT_universal(
+    KC_F1     , KC_F2     , KC_F3     , KC_F4     , KC_F5     ,                              KC_F6     , KC_F7     , KC_F8     , KC_F9     , KC_F10    ,
+    KC_LGUI, SFT_T(KC_MUTE), CTL_T(KC_VOLU), KC_LALT   , XXXXXXX   ,                         XXXXXXX   , KC_RALT   , KC_RCTL   , KC_RSFT   , KC_F11    ,
+    XXXXXXX   , KC_BRID   , KC_VOLD   , KC_BRIU   , XXXXXXX   ,                              XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , KC_F12    ,
+    KC_LGUI    , KC_LCTL   , KC_LALT   , A(KC_GRV)    , KC_LSFT   , XXXXXXX   ,      XXXXXXX   , SFT_T(KC_ENT), XXXXXXX , XXXXXXX  , XXXXXXX   , DF(_JP_DEF_)
   ),
 
   [_JP_DEF_] = LAYOUT_universal(
     KC_Q      , KC_W      , KC_E      , KC_R      , KC_T      ,                              KC_Y      , KC_U      , KC_I      , KC_O      , KC_P      ,
-    KC_A      , KC_S      , KC_D      , KC_F      , KC_G      ,                              KC_H      , KC_J      , KC_K      , KC_L, LT(_NUM_SCR_,KC_MINS),
-    GUI_T(KC_Z), SFT_T(KC_X), CTL_T(KC_C), ALT_T(KC_V), KC_B  ,                              KC_N, ALT_T(KC_M), CTL_T(KC_COMM), SFT_T(KC_DOT), KC_SLSH,
-    XXXXXXX   , XXXXXXX, XXXXXXX, KC_LSFT  , SFT_T(KC_SPC), LT(_JP_SYM_,KC_TAB),  LT(_NUM_SCR_,KC_BSPC), SFT_T(KC_ENT) , XXXXXXX , XXXXXXX  , XXXXXXX   , XXXXXXX
+    GUI_T(KC_A), SFT_T(KC_S), CTL_T(KC_D), ALT_T(KC_F), KC_G  ,                              KC_H, ALT_T(KC_J), CTL_T(KC_K), SFT_T(KC_L), LT(_SCROLL_,KC_MINS),
+    KC_Z      , KC_X      , KC_C      , KC_V      , KC_B      ,                              KC_N      , KC_M      , KC_COMM   , KC_DOT    , KC_SLSH   ,
+    KC_LGUI, KC_LCTL, KC_LALT, KC_GRV, KC_LSFT, LT(_JP_SYM_,KC_SPC),        LT(_JP_SYM_,KC_BSPC), SFT_T(KC_ENT), XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL
   ),
-
-  [_US_SYM_] = LAYOUT_universal(
-    KC_EXLM   , KC_AT     , KC_HASH   , KC_DLR    , KC_PERC   ,                              KC_CIRC   , KC_AMPR   , KC_ASTR   , KC_GRV    , KC_TILD   ,
-    KC_QUES   , KC_LCBR   , KC_LBRC   , KC_LPRN   , KC_LABK   ,                              KC_RCTL   , KC_EQL    , KC_COLN   , KC_QUOT   , KC_UNDS   ,
-    KC_PIPE   , KC_RCBR   , KC_RBRC   , KC_RPRN   , KC_RABK   ,                              KC_RSFT   , KC_PLUS   , KC_SCLN   , KC_DQUO   , KC_BSLS   ,
-    XXXXXXX   , XXXXXXX   , XXXXXXX , DF(_JP_DEF_), SFT_T(KC_SPC), XXXXXXX,         KC_DEL , SFT_T(KC_ENT) , XXXXXXX , XXXXXXX  , XXXXXXX  , XXXXXXX
-  ),
-
+ 
   [_JP_SYM_] = LAYOUT_universal(
-    JP_EXLM   , JP_AT     , JP_HASH   , JP_DLR    , JP_PERC   ,                              JP_CIRC   , JP_AMPR   , JP_ASTR   , JP_GRV    , JP_TILD   ,
-    JP_QUES   , JP_LCBR   , JP_LBRC   , JP_LPRN   , JP_LABK   ,                              KC_RCTL   , JP_EQL    , JP_COLN   , JP_QUOT   , JP_UNDS   ,
-    JP_PIPE   , JP_RCBR   , JP_RBRC   , JP_RPRN   , JP_RABK   ,                              KC_RSFT   , JP_PLUS   , JP_SCLN   , JP_DQUO   , JP_BSLS   ,
-    XXXXXXX   , XXXXXXX   , XXXXXXX , DF(_US_DEF_), SFT_T(KC_SPC), XXXXXXX,         KC_DEL , SFT_T(KC_ENT) , XXXXXXX , XXXXXXX  , XXXXXXX  , XXXXXXX
+    JP_1      , JP_2      , JP_3      , JP_4      , JP_5      ,                              JP_6      , JP_7      , JP_8      , JP_9      , JP_0      ,
+    GUI_T(KC_GRV), SFT_T(KC_PGUP), CTL_T(KC_UP), ALT_T(KC_PGDN), KC_HOME ,                   JP_EQL    , JP_QUOT   , JP_LBRC   , JP_RBRC   , JP_MINS   ,
+    KC_INS    , KC_LEFT   , KC_DOWN   , KC_RGHT   , KC_END    ,                              JP_BSLS   , JP_SCLN   , JP_COMM   , JP_DOT    , JP_SLSH   ,
+    KC_LGUI, KC_LCTL, KC_LALT, KC_GRV, KC_LSFT, LT(_JP_FNC_,KC_TAB),        LT(_JP_FNC_,KC_DEL), SFT_T(KC_ENT), XXXXXXX, XXXXXXX, XXXXXXX, KC_DEL
   ),
 
-  [_NUM_SCR_] = LAYOUT_universal(
+  [_JP_FNC_] = LAYOUT_universal(
     KC_F1     , KC_F2     , KC_F3     , KC_F4     , KC_F5     ,                              KC_F6     , KC_F7     , KC_F8     , KC_F9     , KC_F10    ,
-    KC_1      , KC_2      , KC_3      , KC_4      , KC_5      ,                              KC_LEFT   , KC_DOWN   , KC_UP     , KC_RGHT   , KC_F11    ,
-    GUI_T(KC_6), SFT_T(KC_7), CTL_T(KC_8), ALT_T(KC_9), KC_0  ,                              KC_HOME, ALT_T(KC_PGDN), CTL_T(KC_PGUP), SFT_T(KC_END), KC_F12,
-    XXXXXXX   , XXXXXXX   , XXXXXXX   , A(KC_GRV) , SFT_T(KC_SPC), KC_DEL,          XXXXXXX, SFT_T(KC_ENT), XXXXXXX , XXXXXXX  , XXXXXXX   , XXXXXXX
+    KC_LGUI, SFT_T(KC_MUTE), CTL_T(KC_VOLU), KC_LALT   , XXXXXXX   ,                         XXXXXXX   , KC_RALT   , KC_RCTL   , KC_RSFT   , KC_F11    ,
+    XXXXXXX   , KC_BRID   , KC_VOLD   , KC_BRIU   , XXXXXXX   ,                              XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , KC_F12    ,
+    KC_LGUI    , KC_LCTL   , KC_LALT   , KC_GRV    , KC_LSFT   , XXXXXXX   ,      XXXXXXX   , SFT_T(KC_ENT), XXXXXXX , XXXXXXX  , XXXXXXX   , DF(_US_DEF_)
+  ),
+
+  [_SCROLL_] = LAYOUT_universal(
+    KC_F1     , KC_F2     , KC_F3     , KC_F4     , KC_F5     ,                              KC_F6     , KC_F7     , KC_F8     , KC_F9     , KC_F10    ,
+    XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   ,                              XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX   , KC_F11    ,
+    KC_LGUI    , KC_LSFT   , KC_LCTL   , KC_LALT   , XXXXXXX   ,                             XXXXXXX   , KC_RALT   , KC_RCTL   , KC_RSFT   , KC_F12    ,
+    KC_LGUI    , KC_LCTL   , KC_LALT   , A(KC_GRV) , KC_LSFT   , KC_ENT   ,      KC_BSPC   , KC_SPC    , XXXXXXX   , XXXXXXX   , XXXXXXX   , KC_DEL
   )
+
 };
 // clang-format on
