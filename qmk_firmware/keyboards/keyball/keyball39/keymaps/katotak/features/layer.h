@@ -5,7 +5,6 @@
 enum layer {
   _US_DEF_,
   _US_SYM_,
-  _US_SSYM_,
   _US_FNC_,
   _SCROLL_
 };
