@@ -5,7 +5,6 @@
  *
  * 注意： 以下の設定が必要です
  * rules.mk: COMBO_ENABLE = yes
- * config.h: #define COMBO_COUNT 2（=実際に設定するコンボ数）
  */
 #pragma once
 
@@ -18,14 +17,18 @@ const uint16_t PROGMEM combo_btn3[] = {ALT_T(KC_J), SFT_T(KC_L), COMBO_END};
 const uint16_t PROGMEM combo_btn4[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM combo_btn5[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM combo_btn6[] = {KC_M, KC_DOT, COMBO_END};
+// ESC
+const uint16_t PROGMEM combo_esc[] = {KC_W, KC_E, COMBO_END};
+// LANG
+const uint16_t PROGMEM combo_lang[] = {KC_X, KC_C, COMBO_END};
 
 combo_t key_combos[] = {
-
     COMBO(combo_btn1, KC_BTN1),
     COMBO(combo_btn2, KC_BTN2),
     COMBO(combo_btn3, KC_BTN3),
     COMBO(combo_btn4, KC_BTN4),
     COMBO(combo_btn5, KC_BTN5),
-    COMBO(combo_btn6, C(KC_W))
-
+    COMBO(combo_btn6, C(KC_W)),
+    COMBO(combo_esc, KC_ESC),
+    COMBO(combo_lang, A(KC_GRV))
 };
