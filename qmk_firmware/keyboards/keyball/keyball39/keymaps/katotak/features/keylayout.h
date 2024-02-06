@@ -7,7 +7,11 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_US_DEF_] = LAYOUT_universal(
+<<<<<<< HEAD
     KC_Q      , GUI_T(KC_W), KC_E     , KC_R      , KC_T      ,                              KC_Y      , KC_U      , KC_I      , GUI_T(KC_O), KC_P     ,
+=======
+    KC_Q      , GUI_T(KjC_W), KC_E     , KC_R      , KC_T      ,                              KC_Y      , KC_U      , KC_I      , GUI_T(KC_O), KC_P     ,
+>>>>>>> a2a6e5c21cd6cbbd15ddd663d61f42f3be241bec
     KC_A      , SFT_T(KC_S), CTL_T(KC_D), ALT_T(KC_F), KC_G   ,                              KC_H, ALT_T(KC_J), CTL_T(KC_K), SFT_T(KC_L), LT(_SCROLL_,KC_MINS),
     KC_Z      , KC_X      , KC_C      , KC_V      , KC_B      ,                              KC_N      , KC_M      , KC_COMM   , KC_DOT    , KC_SLSH   ,
     XXXXXXX, XXXXXXX, XXXXXXX, LT(_US_FNC_,KC_TAB), LT(_US_SYM_,KC_SPC), KC_ENT ,  KC_BSPC , KC_RSFT   , XXXXXXX   , XXXXXXX   , XXXXXXX   , XXXXXXX
