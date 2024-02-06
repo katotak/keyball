@@ -17,10 +17,8 @@ const uint16_t PROGMEM combo_btn3[] = {ALT_T(KC_J), SFT_T(KC_L), COMBO_END};
 const uint16_t PROGMEM combo_btn4[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM combo_btn5[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM combo_btn6[] = {KC_M, KC_DOT, COMBO_END};
-// ESC
-const uint16_t PROGMEM combo_esc[] = {KC_W, KC_E, COMBO_END};
 // LANG
-const uint16_t PROGMEM combo_lang[] = {KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM combo_lang[] = {KC_ENT, KC_BSPC, COMBO_END};
 
 combo_t key_combos[] = {
     COMBO(combo_btn1, KC_BTN1),
@@ -29,6 +27,5 @@ combo_t key_combos[] = {
     COMBO(combo_btn4, KC_BTN4),
     COMBO(combo_btn5, KC_BTN5),
     COMBO(combo_btn6, C(KC_W)),
-    COMBO(combo_esc, KC_ESC),
-    COMBO(combo_lang, A(KC_GRV))
+    COMBO(combo_lang, A(KC_GRV)),
 };
