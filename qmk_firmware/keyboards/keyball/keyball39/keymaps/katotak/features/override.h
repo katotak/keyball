@@ -35,9 +35,6 @@
 // const key_override_t jp_key_override_bsls = ko_make_with_layers(MOD_MASK_SHIFT, JP_BSLS, JP_PIPE, _JP_SYM_);
 // const key_override_t jp_key_override_grv  = ko_make_with_layers(MOD_MASK_SHIFT, JP_GRV , JP_TILD, _JP_SYM_);
 
-const key_override_t bs_del_override  = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
-const key_override_t ent_esc_override  = ko_make_basic(MOD_MASK_SHIFT, KC_ENT, KC_ESC);
-
 // 使用する全てのキーオーバーライドをグローバルに定義
 const key_override_t **key_overrides = (const key_override_t *[]){
     // &jp_key_override_1    ,
@@ -61,7 +58,5 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     // &jp_key_override_slsh ,
     // &jp_key_override_bsls ,
     // &jp_key_override_grv  ,
-    &bs_del_override      ,
-    &ent_esc_override     ,
     NULL  // オーバーライドの配列は Null で終了
 };
