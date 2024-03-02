@@ -1,9 +1,8 @@
-RGBLIGHT_ENABLE = yes
-# RGB_MATRIX_ENABLE = yes
+# RGBLIGHT_ENABLE = yes
 
 OLED_ENABLE = yes
 
-# VIA_ENABLE = yes
+VIA_ENABLE = yes
 
 EXTRAKEY_ENABLE = yes
 

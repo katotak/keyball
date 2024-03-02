@@ -22,27 +22,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // 容量削減のため以下をオミット
 #ifdef RGBLIGHT_ENABLE
-// #define RGBLIGHT_EFFECT_BREATHING
-// #define RGBLIGHT_EFFECT_RAINBOW_MOOD
-#define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-// #define RGBLIGHT_EFFECT_SNAKE
-// #define RGBLIGHT_EFFECT_KNIGHT
-// #define RGBLIGHT_EFFECT_CHRISTMAS
-// #define RGBLIGHT_EFFECT_STATIC_GRADIENT
-// #define RGBLIGHT_EFFECT_RGB_TEST
-// #define RGBLIGHT_EFFECT_ALTERNATING
-// #define RGBLIGHT_EFFECT_TWINKLE
+// #    define RGBLIGHT_EFFECT_BREATHING
+#    define RGBLIGHT_EFFECT_RAINBOW_MOOD
+#    define RGBLIGHT_EFFECT_RAINBOW_SWIRL
+// #    define RGBLIGHT_EFFECT_SNAKE
+// #    define RGBLIGHT_EFFECT_KNIGHT
+// #    define RGBLIGHT_EFFECT_CHRISTMAS
+// #    define RGBLIGHT_EFFECT_STATIC_GRADIENT
+// #    define RGBLIGHT_EFFECT_RGB_TEST
+// #    define RGBLIGHT_EFFECT_ALTERNATING
+// #    define RGBLIGHT_EFFECT_TWINKLE
 
-#undef RGBLED_NUM 
-#define RGBLED_NUM 46
-#undef RGBLED_SPLIT
-#define RGBLED_SPLIT { 24, 22 }  // (24 + 22)
-#undef RGBLIGHT_LIMIT_VAL
-#define RGBLIGHT_LIMIT_VAL 125
-#define RGBLIGHT_SPLIT
-#endif
+#   undef RGBLED_NUM 
+#   define RGBLED_NUM 46
+#   undef RGBLED_SPLIT
+#   define RGBLED_SPLIT { 24, 22 }  // (24 + 22)
+#   undef RGBLIGHT_LIMIT_VAL
+#   define RGBLIGHT_LIMIT_VAL 125
+#   define RGBLIGHT_SPLIT
 
-#define LED_LAYOUT( \
+#   define LED_LAYOUT( \
 L00, L01, L02, L03, L04,      R00, R01, R02, R03, R04, \
 L10, L11, L12, L13, L14,      R10, R11, R12, R13, R14, \
 L20, L21, L22, L23, L24,      R20, R21, R22, R23, R24, \
@@ -64,12 +63,13 @@ L40, L41, L42, L43, L44, L45, R40, R41, R42, R43, R44, R45 \
     R00, R10, R20 \
     }
 
-#define RGBLIGHT_LED_MAP LED_LAYOUT( \
+#   define RGBLIGHT_LED_MAP LED_LAYOUT( \
      0,  1,  2,  3,  4,     18, 19, 20, 21, 22, \
      5,  6,  7,  8,  9,     23, 24, 25, 26, 27, \
     10, 11, 12, 13, 14,     28, 29, 30, 31, 32, \
     15, 16, 17,                             33, \
     34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 )
+#endif
 
 #define KEYBALL_SCROLLSNAP_ENABLE 0  // scrollsnapをオフにする
 
