@@ -76,6 +76,7 @@ L40, L41, L42, L43, L44, L45, R40, R41, R42, R43, R44, R45 \
 #define TAP_CODE_DELAY 5
 
 #define KEYBALL_CPI_DEFAULT 700       // 光学センサーPMW3360DM の解像度 (CPI) の規定値
+#define KEYBALL_CPI_SLOW 200       // 光学センサーの解像度 (CPI) の精密モード
 #define KEYBALL_SCROLL_DIV_DEFAULT 5  // スクロール速度の規定値
 
 // #define AUTO_CLICK_LAYER 4            // マウス入力が可能になった際に有効になるレイヤー

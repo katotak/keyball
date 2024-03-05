@@ -9,17 +9,18 @@
 #pragma once
 
 #include "features/layer.h"
+#include "features/customkey.h"
 
-// マウスボタン
+// マウス
 const uint16_t PROGMEM combo_btn1[] = {ALT_T(KC_J), CTL_T(KC_K), COMBO_END};
 const uint16_t PROGMEM combo_btn2[] = {CTL_T(KC_K), SFT_T(KC_L), COMBO_END};
 const uint16_t PROGMEM combo_btn3[] = {ALT_T(KC_J), SFT_T(KC_L), COMBO_END};
 const uint16_t PROGMEM combo_btn4[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM combo_btn5[] = {KC_COMM, KC_DOT, COMBO_END};
-const uint16_t PROGMEM combo_btn6[] = {KC_M, KC_DOT, COMBO_END};
-
+const uint16_t PROGMEM combo_btn6[] = {KC_M, KC_DOT, COMBO_END};                    // タブを閉じる
+const uint16_t PROGMEM combo_cpis[] = {SFT_T(KC_L), LT(_SCROLL_,KC_MINS), COMBO_END};    // CPIを下げる
 // LANG
-const uint16_t PROGMEM combo_lang[] = {KC_ENT, KC_BSPC, COMBO_END};
+const uint16_t PROGMEM combo_lang[] = {LT(_US_FNC_,KC_ENT), LT(_US_FNC_,KC_BSPC), COMBO_END};
 // ESC
 const uint16_t PROGMEM combo_esc[] = {KC_W, KC_E, COMBO_END};
 // tab
@@ -30,12 +31,13 @@ const uint16_t PROGMEM combo_bs[] = {KC_U, KC_I, COMBO_END};
 const uint16_t PROGMEM combo_del[] = {KC_I, KC_O, COMBO_END};
 
 combo_t key_combos[] = {
-    COMBO(combo_btn1, LCA_T(KC_BTN1)),
-    COMBO(combo_btn2, C_S_T(KC_BTN2)),
-    COMBO(combo_btn3, LSA_T(KC_BTN3)),
+    COMBO(combo_btn1, KC_BTN1),
+    COMBO(combo_btn2, KC_BTN2),
+    COMBO(combo_btn3, KC_BTN3),
     COMBO(combo_btn4, KC_BTN4),
     COMBO(combo_btn5, KC_BTN5),
     COMBO(combo_btn6, C(KC_W)),
+    COMBO(combo_cpis, CPI_SLW),
     COMBO(combo_lang, A(KC_GRV)),
     COMBO(combo_esc, KC_ESC),
     COMBO(combo_tab, KC_TAB),
