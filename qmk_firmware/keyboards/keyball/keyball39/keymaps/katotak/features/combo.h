@@ -18,7 +18,7 @@ const uint16_t PROGMEM combo_btn4[] = {KC_H, KC_J, COMBO_END};
 const uint16_t PROGMEM combo_btn5[] = {KC_L, LT(_SCROLL_,KC_MINS), COMBO_END};
 const uint16_t PROGMEM combo_btn6[] = {KC_H, LT(_SCROLL_,KC_MINS), COMBO_END};       // タブを閉じる
 // LANG
-const uint16_t PROGMEM combo_lang[] = {LT(_US_FNC_,KC_ENT), LT(_US_FNC_,KC_BSPC), COMBO_END};
+const uint16_t PROGMEM combo_lang[] = {LT(_FUNC_,KC_ENT), LT(_FUNC_,KC_BSPC), COMBO_END};
 // ESC
 const uint16_t PROGMEM combo_esc[] = {KC_Q, KC_W, COMBO_END};
 // tab

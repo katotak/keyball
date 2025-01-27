@@ -16,8 +16,8 @@ void keyball_oled_render_layerinfo_kt(void) {
         case _US_SYM_:
             n = PSTR("_US_SYM_");
             break;
-        case _US_FNC_:
-            n = PSTR("_US_FNC_");
+        case _FUNC_:
+            n = PSTR("_FUNC_");
             break;
         case _SCROLL_:
             n = PSTR("_SCROLL_");
