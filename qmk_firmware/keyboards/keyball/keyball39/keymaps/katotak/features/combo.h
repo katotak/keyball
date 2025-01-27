@@ -9,7 +9,6 @@
 #pragma once
 
 #include "features/layer.h"
-#include "features/customkey.h"
 
 // マウス
 const uint16_t PROGMEM combo_btn1[] = {KC_J, KC_K, COMBO_END};

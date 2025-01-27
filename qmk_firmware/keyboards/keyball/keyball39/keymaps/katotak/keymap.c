@@ -53,4 +53,3 @@
 #include "features/combo.h"
 #include "features/override.h"
 #include "features/keylayout.h"
-#include "features/customkey.h"
