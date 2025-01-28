@@ -13,50 +13,48 @@
 #include "features/layer.h"
 
 // JIS配列
-// const key_override_t jp_key_override_1    = ko_make_with_layers(MOD_MASK_SHIFT, JP_1   , JP_EXLM, _JP_SYM_);
-// const key_override_t jp_key_override_2    = ko_make_with_layers(MOD_MASK_SHIFT, JP_2   , JP_AT  , _JP_SYM_);
-// const key_override_t jp_key_override_3    = ko_make_with_layers(MOD_MASK_SHIFT, JP_3   , JP_HASH, _JP_SYM_);
-// const key_override_t jp_key_override_4    = ko_make_with_layers(MOD_MASK_SHIFT, JP_4   , JP_DLR , _JP_SYM_);
-// const key_override_t jp_key_override_5    = ko_make_with_layers(MOD_MASK_SHIFT, JP_5   , JP_PERC, _JP_SYM_);
-// const key_override_t jp_key_override_6    = ko_make_with_layers(MOD_MASK_SHIFT, JP_6   , JP_CIRC, _JP_SYM_);
-// const key_override_t jp_key_override_7    = ko_make_with_layers(MOD_MASK_SHIFT, JP_7   , JP_AMPR, _JP_SYM_);
-// const key_override_t jp_key_override_8    = ko_make_with_layers(MOD_MASK_SHIFT, JP_8   , JP_ASTR, _JP_SYM_);
-// const key_override_t jp_key_override_9    = ko_make_with_layers(MOD_MASK_SHIFT, JP_9   , JP_LPRN, _JP_SYM_);
-// const key_override_t jp_key_override_0    = ko_make_with_layers(MOD_MASK_SHIFT, JP_0   , JP_RPRN, _JP_SYM_);
-// const key_override_t jp_key_override_lbrc = ko_make_with_layers(MOD_MASK_SHIFT, JP_LBRC, JP_LCBR, _JP_SYM_);
-// const key_override_t jp_key_override_rbrc = ko_make_with_layers(MOD_MASK_SHIFT, JP_RBRC, JP_RCBR, _JP_SYM_);
-// const key_override_t jp_key_override_comm = ko_make_with_layers(MOD_MASK_SHIFT, JP_COMM, JP_LABK, _JP_SYM_);
-// const key_override_t jp_key_override_dot  = ko_make_with_layers(MOD_MASK_SHIFT, JP_DOT , JP_RABK, _JP_SYM_);
-// const key_override_t jp_key_override_mins = ko_make_with_layers(MOD_MASK_SHIFT, JP_MINS, JP_UNDS, _JP_SYM_);
-// const key_override_t jp_key_override_eql  = ko_make_with_layers(MOD_MASK_SHIFT, JP_EQL , JP_PLUS, _JP_SYM_);
-// const key_override_t jp_key_override_quot = ko_make_with_layers(MOD_MASK_SHIFT, JP_QUOT, JP_DQUO, _JP_SYM_);
-// const key_override_t jp_key_override_scln = ko_make_with_layers(MOD_MASK_SHIFT, JP_SCLN, JP_COLN, _JP_SYM_);
-// const key_override_t jp_key_override_slsh = ko_make_with_layers(MOD_MASK_SHIFT, JP_SLSH, JP_QUES, _JP_SYM_);
-// const key_override_t jp_key_override_bsls = ko_make_with_layers(MOD_MASK_SHIFT, JP_BSLS, JP_PIPE, _JP_SYM_);
-// const key_override_t jp_key_override_grv  = ko_make_with_layers(MOD_MASK_SHIFT, JP_GRV , JP_TILD, _JP_SYM_);
+const key_override_t sft_kc_2_to_jp_at      = ko_make_with_layers(MOD_MASK_SHIFT, KC_2, JP_AT, (1<<_JP_DEF_ | 1<<_JP_SYM_));
+const key_override_t sft_kc_6_to_jp_circ    = ko_make_with_layers(MOD_MASK_SHIFT, KC_6, JP_CIRC, (1<<_JP_DEF_ | 1<<_JP_SYM_));
+const key_override_t sft_kc_7_to_jp_ampr    = ko_make_with_layers(MOD_MASK_SHIFT, KC_7, JP_AMPR, (1<<_JP_DEF_ | 1<<_JP_SYM_));
+const key_override_t sft_kc_8_to_jp_astr    = ko_make_with_layers(MOD_MASK_SHIFT, KC_8, JP_ASTR, (1<<_JP_DEF_ | 1<<_JP_SYM_));
+const key_override_t sft_kc_9_to_jp_lprn    = ko_make_with_layers(MOD_MASK_SHIFT, KC_9, JP_LPRN, (1<<_JP_DEF_ | 1<<_JP_SYM_));
+const key_override_t sft_kc_0_to_jp_rprn    = ko_make_with_layers(MOD_MASK_SHIFT, KC_0, JP_RPRN, (1<<_JP_DEF_ | 1<<_JP_SYM_));
+const key_override_t sft_kc_mins_to_jp_unds = ko_make_with_layers(MOD_MASK_SHIFT, LT(_SCROLL_,KC_MINS), JP_UNDS, (1<<_JP_DEF_ | 1<<_JP_SYM_));
+const key_override_t kc_eql_to_jp_eql       = ko_make_with_layers_and_negmods(0, KC_EQL, JP_EQL, (1<<_JP_DEF_ | 1<<_JP_SYM_), (uint8_t) MOD_MASK_SHIFT);
+const key_override_t sft_kc_eql_to_jp_plus  = ko_make_with_layers(MOD_MASK_SHIFT, KC_EQL, JP_PLUS, (1<<_JP_DEF_ | 1<<_JP_SYM_));
+const key_override_t kc_lbrc_to_jp_lbrc     = ko_make_with_layers_and_negmods(0, CTL_T(KC_LBRC), JP_LBRC, (1<<_JP_DEF_ | 1<<_JP_SYM_), (uint8_t) MOD_MASK_SHIFT);
+const key_override_t sft_kc_lbrc_to_jp_lcbr     = ko_make_with_layers(MOD_MASK_SHIFT, CTL_T(KC_LBRC), JP_LCBR, (1<<_JP_DEF_ | 1<<_JP_SYM_));
+const key_override_t kc_rbrc_to_jp_rbrc     = ko_make_with_layers_and_negmods(0, SFT_T(KC_RBRC), JP_RBRC, (1<<_JP_DEF_ | 1<<_JP_SYM_), (uint8_t) MOD_MASK_SHIFT);
+const key_override_t sft_kc_rbrc_to_jp_rcbr     = ko_make_with_layers(MOD_MASK_SHIFT, SFT_T(KC_RBRC), JP_RCBR, (1<<_JP_DEF_ | 1<<_JP_SYM_));
+const key_override_t kc_bsls_to_jp_bsls     = ko_make_with_layers_and_negmods(0, GUI_T(KC_BSLS), JP_BSLS, (1<<_JP_DEF_ | 1<<_JP_SYM_), (uint8_t) MOD_MASK_SHIFT);
+const key_override_t sft_kc_bsls_to_jp_pipe     = ko_make_with_layers(MOD_MASK_SHIFT, GUI_T(KC_BSLS), JP_PIPE, (1<<_JP_DEF_ | 1<<_JP_SYM_));
+const key_override_t sft_kc_scln_to_jp_coln     = ko_make_with_layers(MOD_MASK_SHIFT, KC_SCLN, JP_COLN, (1<<_JP_DEF_ | 1<<_JP_SYM_));
+const key_override_t kc_quot_to_jp_quot     = ko_make_with_layers_and_negmods(0, KC_QUOT, JP_QUOT, (1<<_JP_DEF_ | 1<<_JP_SYM_), (uint8_t) MOD_MASK_SHIFT);
+const key_override_t sft_kc_quot_to_jp_dquo     = ko_make_with_layers(MOD_MASK_SHIFT, KC_QUOT, JP_DQUO, (1<<_JP_DEF_ | 1<<_JP_SYM_));
+const key_override_t kc_grv_to_jp_grv   = ko_make_with_layers_and_negmods(0, KC_GRV, JP_GRV, (1<<_JP_DEF_ | 1<<_JP_SYM_), (uint8_t) MOD_MASK_SHIFT);
+const key_override_t sft_kc_grv_to_jp_tild = ko_make_with_layers(MOD_MASK_SHIFT, KC_GRV, JP_TILD, (1<<_JP_DEF_ | 1<<_JP_SYM_));
 
 // 使用する全てのキーオーバーライドをグローバルに定義
 const key_override_t **key_overrides = (const key_override_t *[]){
-    // &jp_key_override_1    ,
-    // &jp_key_override_2    ,
-    // &jp_key_override_3    ,
-    // &jp_key_override_4    ,
-    // &jp_key_override_5    ,
-    // &jp_key_override_6    ,
-    // &jp_key_override_7    ,
-    // &jp_key_override_8    ,
-    // &jp_key_override_9    ,
-    // &jp_key_override_0    ,
-    // &jp_key_override_lbrc ,
-    // &jp_key_override_rbrc ,
-    // &jp_key_override_comm ,
-    // &jp_key_override_dot  ,
-    // &jp_key_override_mins ,
-    // &jp_key_override_eql  ,
-    // &jp_key_override_quot ,
-    // &jp_key_override_scln ,
-    // &jp_key_override_slsh ,
-    // &jp_key_override_bsls ,
-    // &jp_key_override_grv  ,
+    &sft_kc_2_to_jp_at	    ,
+    &sft_kc_6_to_jp_circ	,
+    &sft_kc_7_to_jp_ampr	,
+    &sft_kc_8_to_jp_astr	,
+    &sft_kc_9_to_jp_lprn	,
+    &sft_kc_0_to_jp_rprn	,
+    &sft_kc_mins_to_jp_unds	,
+    &kc_eql_to_jp_eql	    ,
+    &sft_kc_eql_to_jp_plus	,
+    &kc_lbrc_to_jp_lbrc	    ,
+    &sft_kc_lbrc_to_jp_lcbr	,
+    &kc_rbrc_to_jp_rbrc	    ,
+    &sft_kc_rbrc_to_jp_rcbr	,
+    &kc_bsls_to_jp_bsls	    ,
+    &sft_kc_bsls_to_jp_pipe	,
+    &sft_kc_scln_to_jp_coln	,
+    &kc_quot_to_jp_quot	    ,
+    &sft_kc_quot_to_jp_dquo	,
+    &kc_grv_to_jp_grv	    ,
+    &sft_kc_grv_to_jp_tild  ,
     NULL  // オーバーライドの配列は Null で終了
 };
