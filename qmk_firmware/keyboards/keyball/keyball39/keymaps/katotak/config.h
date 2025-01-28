@@ -83,6 +83,8 @@ L40, L41, L42, L43, L44, L45, R40, R41, R42, R43, R44, R45 \
 // #define AUTO_CLICK_CLICKED_STAY_TIME 300;     // CLICKEDの滞在時間（千分の一秒)。その後、クリックレイヤーが無効になる
 // #define AUTO_CLICK_CLICKABLE_STAY_TIME 1000;  // CLICKABLEの滞在時間（千分の一秒)。その後、クリックレイヤーが無効になる
 
+#define DYNAMIC_KEYMAP_LAYER_COUNT 6
+
 // ファームウェアのサイズを削減
 #define NO_ACTION_ONESHOT  // 392バイト
 

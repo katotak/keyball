@@ -1,11 +1,10 @@
 #pragma once
 
-#undef DYNAMIC_KEYMAP_LAYER_COUNT
-#define DYNAMIC_KEYMAP_LAYER_COUNT 8
-
 enum layer {
   _US_DEF_,
   _US_SYM_,
+  _JP_DEF_,
+  _JP_SYM_,
   _FUNC_,
   _SCROLL_
 };
