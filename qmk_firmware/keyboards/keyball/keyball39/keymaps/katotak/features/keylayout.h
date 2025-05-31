@@ -14,7 +14,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_US_SYM_] = LAYOUT_universal(
     KC_1       , KC_2       , KC_3       , KC_4       , KC_5       ,                              KC_6       , KC_7       , KC_8       , KC_9       , KC_0       ,
-    KC_INS     , KC_HOME    , KC_UP      , KC_END     , KC_PGUP    ,                              XXXXXXX    , KC_GRV     , KC_EQL     , KC_QUOT    , KC_SCLN    ,
+    KC_INS     , KC_HOME    , KC_UP      , KC_END     , KC_PGUP    ,                              XXXXXXX    , KC_GRV     , KC_EQL     , KC_SCLN    , KC_QUOT    ,
     GUI_T(KC_PSCR), ALT_T(KC_LEFT), CTL_T(KC_DOWN), SFT_T(KC_RGHT), KC_PGDN,                      DF(_JP_DEF_), KC_LSFT, CTL_T(KC_LBRC), ALT_T(KC_RBRC), GUI_T(KC_BSLS),
     _______    , _______    , _______    , _______    , _______    , _______    ,    _______    , _______    , _______    , _______    , _______    , _______
   ),
@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_JP_SYM_] = LAYOUT_universal(
     KC_1       , KC_2       , KC_3       , KC_4       , KC_5       ,                              KC_6       , KC_7       , KC_8       , KC_9       , KC_0       ,
-    KC_INS     , KC_HOME    , KC_UP      , KC_END     , KC_PGUP    ,                              XXXXXXX    , KC_GRV     , KC_EQL     , KC_QUOT    , KC_SCLN    ,
+    KC_INS     , KC_HOME    , KC_UP      , KC_END     , KC_PGUP    ,                              XXXXXXX    , KC_GRV     , KC_EQL     , KC_SCLN    , KC_QUOT    ,
     GUI_T(KC_PSCR), ALT_T(KC_LEFT), CTL_T(KC_DOWN), SFT_T(KC_RGHT), KC_PGDN,                      DF(_US_DEF_), KC_LSFT, CTL_T(KC_LBRC), ALT_T(KC_RBRC), GUI_T(KC_BSLS),
     _______    , _______    , _______    , _______    , _______    , _______    ,    _______    , _______    , _______    , _______    , _______    , _______
   ),
