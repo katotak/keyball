@@ -1,0 +1,13 @@
+services:
+  qmk:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: qmk-build-container
+    volumes:
+      - .:/usr/src/app
+    environment:
+      kb: keyball/keyball39
+      km: katotak
+    working_dir: /usr/src/app
+    command: bash qmk_build.sh
