@@ -7,6 +7,7 @@ services:
     volumes:
       - .:/usr/src/app
     environment:
+      qmkdir: qmk_firmware/keyboards/keyball
       kb: keyball/keyball39
       km: katotak
     working_dir: /usr/src/app

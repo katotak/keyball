@@ -1,48 +1,55 @@
-# Keyball Series
+# QMK Firmware with Docker
 
-![Keyball61](./keyball61/doc/rev1/images/kb61_001.jpg)
+Dockerを使用してQMKファームウェアをビルドする方法
 
-Keyball series is keyboard family which have 100% track ball.
+## 前提条件
 
-Keyboards in the family are:
+- Dockerがインストールされていること
+- docker-composeが利用可能なこと
 
-* Available
-    * Keyball39: split + 39 keys + a track ball
-    * Keyball44: split + 44 keys + a track ball
-    * Keyball61: split + 61 keys + a track ball
-* Unavailable
-    * Keyball46 (first one!)
-    * One47
+## ビルド方法
 
-## Where to Buy
+1. プロジェクトのルートディレクトリに移動:
 
-|Keyboard   |Yushakobo / 遊舎工房                       |Shirogane Lab / 白金ラボ                                   |
-|-----------|-------------------------------------------|-----------------------------------------------------------|
-|Keyball39  |<https://shop.yushakobo.jp/products/5357>  |<https://shirogane-lab.net/items/64b8f8693ee3fd0045280190> |
-|Keyball44  |N/A                                        |<https://shirogane-lab.net/items/64b7a006eb6dbe00346cd0c5> |
-|Keyball61  |<https://shop.yushakobo.jp/products/5358>  |<https://shirogane-lab.net/items/64b8ed191435c1002bc4cd30> |
+```bash
+cd /path/to/qmk_firmware
+```
 
-## Build Guide
+2. デフォルト設定でビルド実行 (keyball39 + katotakキーマップ):
 
-*   Keyball39:
-    [English/英語](/keyball39/doc/rev1/buildguide_en.md),
-    [日本語/Japanese (ピンヘッダ版)](./keyball39/doc/rev1/buildguide_jp.md),
-    [日本語/Japanese (コンスルー版)](./keyball39/doc/rev1/buildguide_jp_conth.md)
-*   Keyball44: ~~English/英語~~ (Sorry, unavailable),
-    [日本語/Japanese (ピンヘッダ版)](./keyball44/doc/rev1/buildguide_jp.md),
-    [日本語/Japanese (コンスルー版)](./keyball44/doc/rev1/buildguide_jp_conth.md)
-*   Keyball46:
-    [English/英語](./keyball46/doc/rev1/buildguide_en.md),
-    [日本語/Japanese](./keyball46/doc/rev1/buildguide_jp.md)
-*   Keyball61:
-    [English/英語](./keyball61/doc/rev1/buildguide_en.md),
-    [日本語/Japanese (ピンヘッダ版)](./keyball61/doc/rev1/buildguide_jp.md),
-    [日本語/Japanese (コンスルー版)](./keyball61/doc/rev1/buildguide_jp_conth.md)
+```bash
+docker compose run --rm qmk
+```
 
-## Firmware
+3. 別のキーボード/キーマップでビルドする場合:
 
-See [document for firmware source code](./qmk_firmware/keyboards/keyball/readme.md).
+```bash
+# 環境変数でキーボード(kb)とキーマップ(km)を指定
+docker compose run --rm -e kb=keyball/keyball44 -e km=default qmk
+```
 
-### Pre-compiled Firmwares
+## ビルド成果物
 
-(TO BE DOCUMENTED)
+ビルドされたファームウェアは`.build/`ディレクトリ以下に生成されます。
+
+## サポートされているキーボード/キーマップ
+
+- キーボード (kb環境変数):
+  - keyball/keyball39
+  - keyball/keyball44  
+  - keyball/keyball61
+  - keyball/keyball46
+  - keyball/one47
+
+- キーマップ (km環境変数):
+  - default
+  - via  
+  - test
+  - katotak
+  - develop
+
+## 注意事項
+
+- 初回実行時はDockerイメージのビルドに時間がかかります
+- ビルド後はコンテナが自動で削除されます
+- デフォルトのキーボードはkeyball39、キーマップはkatotakです
